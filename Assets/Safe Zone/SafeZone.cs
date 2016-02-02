@@ -3,7 +3,8 @@ using System.Collections;
 
 public class SafeZone : MonoBehaviour {
     public GameObject TargetJoueur;
-    public GameObject TargetAI;
+    public static bool Insafe = false;
+    //public GameObject TargetAI;
     // Use this for initialization
     void Start () {
 	
@@ -16,6 +17,7 @@ public class SafeZone : MonoBehaviour {
     void OnTriggerEnter(Collider TargetJoueur)
     {
         Debug.Log("Bonjour");
+        Insafe = true;
         BasicAI.moveSpeed = 0f;
         //Destroy(TargetAI.gameObject);
     }
@@ -23,6 +25,7 @@ public class SafeZone : MonoBehaviour {
     {
         Debug.Log("Aureveoir");
         BasicAI.moveSpeed = 5f;
+        Insafe = false;
         //Instantiate(TargetAI);
     }
 }

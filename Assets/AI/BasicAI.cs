@@ -14,9 +14,17 @@ public class BasicAI : MonoBehaviour {
    This ai will fly and move through objects inlcuding terrain!
  */
 	void  Update (){
+        if (SafeZone.Insafe == false)
+        {
+            moveSpeed = 5f;
+        }
+        if (SafeZone.Insafe == true)
+        {
+            moveSpeed = 0f;
+        }
 
-		// Gauge the distance to the player. Line in 3d space. Draws a line from source to Target.
-		Distance = Vector3.Distance(Target.position, transform.position);
+        // Gauge the distance to the player. Line in 3d space. Draws a line from source to Target.
+        Distance = Vector3.Distance(Target.position, transform.position);
 
 		// AI begins tracking player.
 		if (Distance < lookAtDistance)
