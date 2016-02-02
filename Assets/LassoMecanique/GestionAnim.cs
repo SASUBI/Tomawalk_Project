@@ -13,7 +13,7 @@ public class GestionAnim : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetButtonDown("P2_buttonX") || Input.GetKeyDown(KeyCode.D))
         {
             Audio.Play();
             Debug.Log("Vasy");
