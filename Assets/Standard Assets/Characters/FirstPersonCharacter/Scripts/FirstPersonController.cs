@@ -10,6 +10,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+
+        private float varwalkspeedcote;
+        private bool inslowzone = false;
+        private bool walkspeedaugment = false;
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -55,12 +59,38 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            varwalkspeedcote = m_WalkSpeed;
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+            //SLOW IN ZONE
+       
+            if (m_WalkSpeed > varwalkspeedcote)
+            {
+                m_WalkSpeed = varwalkspeedcote;
+            }
+            if (Input.GetButtonDown("P2_buttonY") && inslowzone == true || Input.GetButtonDown("P1_buttonY") && inslowzone == true || Input.GetKeyDown(KeyCode.X) && inslowzone == true || Input.GetMouseButtonDown(1) && inslowzone == true)
+            {
+                m_WalkSpeed += 0.2f;
+                walkspeedaugment = true;
+                Debug.Log("augment");
+            }
+            if (walkspeedaugment == true)
+            {
+                walkspeedaugment = false;
+            }
+            //CROUCH
+            if (Input.GetButton("P2_button9") || Input.GetKey(KeyCode.C))
+            {
+                transform.localScale = new Vector3(1, 0.25f, 1);
+                Debug.Log("Key F press...");
+            }
+            else {
+                transform.localScale = new Vector3(1, 1f, 1);
+            }
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -113,7 +143,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
-                if (m_Jump)
+                if (m_Jump || (Input.GetMouseButtonDown(0)) || (Input.GetKeyDown(KeyCode.Z)))
                 {
                     m_MoveDir.y = m_JumpSpeed;
                     PlayJumpSound();
@@ -133,6 +163,28 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.UpdateCursorLock();
         }
 
+        //SI LE JOUEUR RENTRE DANS LA ZONE DE SLOW
+        void OnTriggerEnter(Collider col)
+        {
+            if (col.tag == ("slowzone"))
+            {
+                inslowzone = true;
+                varwalkspeedcote = m_WalkSpeed;
+                m_WalkSpeed = m_WalkSpeed / 3;
+                Debug.Log("slowzonein");
+            }
+        }
+
+
+        void OnTriggerExit(Collider col)
+        {
+            if (col.tag == ("slowzone"))
+            {
+                inslowzone = false;
+                m_WalkSpeed = varwalkspeedcote;
+                Debug.Log("slowzoneout");
+            }
+        }
 
         private void PlayJumpSound()
         {
@@ -212,7 +264,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            if (inslowzone != true){
+
+                if (Input.GetMouseButton(1)){
+                    m_IsWalking = false;
+                }
+                else if (Input.GetButton("P1_buttonB") == true)  {
+                    m_IsWalking = false;
+                }
+                else {
+                    m_IsWalking = true;
+                }
+
+
+
+                //m_IsWalking = !Input.GetMouseButton(1);
+                //m_IsWalking = !Input.GetButtonDown("P1_buttonB");
+            }
+            else
+            {
+                m_IsWalking = true;
+            }
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
