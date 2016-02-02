@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomawalk_Project.CSharp.Plugins", "Tomawalk_Project.CSharp.Plugins.csproj", "{23E17885-52CF-C244-581D-4A05D9DAB60A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomawalk_Project.CSharp", "Tomawalk_Project.CSharp.csproj", "{1255A97B-1095-4ADB-DD86-CE223562269C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomawalk_Project.CSharp.Editor", "Tomawalk_Project.CSharp.Editor.csproj", "{612615ED-B56A-7963-1549-0ECCA78885C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E17885-52CF-C244-581D-4A05D9DAB60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E17885-52CF-C244-581D-4A05D9DAB60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E17885-52CF-C244-581D-4A05D9DAB60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E17885-52CF-C244-581D-4A05D9DAB60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1255A97B-1095-4ADB-DD86-CE223562269C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1255A97B-1095-4ADB-DD86-CE223562269C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1255A97B-1095-4ADB-DD86-CE223562269C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1255A97B-1095-4ADB-DD86-CE223562269C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612615ED-B56A-7963-1549-0ECCA78885C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612615ED-B56A-7963-1549-0ECCA78885C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612615ED-B56A-7963-1549-0ECCA78885C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612615ED-B56A-7963-1549-0ECCA78885C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
