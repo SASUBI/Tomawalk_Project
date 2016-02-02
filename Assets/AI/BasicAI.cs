@@ -17,10 +17,12 @@ public class BasicAI : MonoBehaviour {
         if (SafeZone.Insafe == false)
         {
             moveSpeed = 5f;
+            
         }
         if (SafeZone.Insafe == true)
         {
             moveSpeed = 0f;
+           
         }
 
         // Gauge the distance to the player. Line in 3d space. Draws a line from source to Target.

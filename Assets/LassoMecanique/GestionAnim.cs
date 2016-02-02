@@ -16,7 +16,7 @@ public class GestionAnim : MonoBehaviour {
         if (Input.GetButtonDown("P2_buttonX") || Input.GetKeyDown(KeyCode.D))
         {
             Audio.Play();
-            Debug.Log("Vasy");
+            
             anim.Play();
         }
         
