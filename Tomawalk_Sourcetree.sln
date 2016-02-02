@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{71C83054-6C37-38B5-E878-2A2127A3E336}") = "Tomawalk_Sourcetree", "Assembly-CSharp-firstpass.csproj", "{C95B28EB-75FF-796C-F151-EEDA7D521476}"
+EndProject
+Project("{71C83054-6C37-38B5-E878-2A2127A3E336}") = "Tomawalk_Sourcetree", "Assembly-CSharp.csproj", "{6BE1C482-0140-7DE5-1416-B9C596CCE249}"
+EndProject
+Project("{71C83054-6C37-38B5-E878-2A2127A3E336}") = "Tomawalk_Sourcetree", "Assembly-CSharp-Editor.csproj", "{F619F42A-1994-CA0A-8D83-E2757F8AA048}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C95B28EB-75FF-796C-F151-EEDA7D521476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95B28EB-75FF-796C-F151-EEDA7D521476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95B28EB-75FF-796C-F151-EEDA7D521476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95B28EB-75FF-796C-F151-EEDA7D521476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE1C482-0140-7DE5-1416-B9C596CCE249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE1C482-0140-7DE5-1416-B9C596CCE249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE1C482-0140-7DE5-1416-B9C596CCE249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE1C482-0140-7DE5-1416-B9C596CCE249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F619F42A-1994-CA0A-8D83-E2757F8AA048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F619F42A-1994-CA0A-8D83-E2757F8AA048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F619F42A-1994-CA0A-8D83-E2757F8AA048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F619F42A-1994-CA0A-8D83-E2757F8AA048}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
