@@ -67,7 +67,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             //SLOW IN ZONE
-       
+
             if (m_WalkSpeed > varwalkspeedcote)
             {
                 m_WalkSpeed = varwalkspeedcote;
@@ -97,6 +97,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+
+
+
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
@@ -145,6 +148,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_Jump || (Input.GetMouseButtonDown(0)) || (Input.GetKeyDown(KeyCode.Z)))
                 {
+
                     m_MoveDir.y = m_JumpSpeed;
                     PlayJumpSound();
                     m_Jump = false;
