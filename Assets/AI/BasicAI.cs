@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class BasicAI : MonoBehaviour {
 
 	public float Distance;
@@ -41,7 +41,7 @@ public class BasicAI : MonoBehaviour {
         if (Distance <4)
         {
             Destroy(Targette.gameObject);
-            Application.LoadLevel(0);
+            SceneManager.LoadScene("EcranAccueil");
         } 
 		if (Distance > 25) {
 			moveSpeed = 25f;
