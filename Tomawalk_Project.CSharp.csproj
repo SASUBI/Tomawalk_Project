@@ -72,8 +72,10 @@
     <Compile Include="Assets\Dynamite\Dynamite.cs" />
     <Compile Include="Assets\Dynamite\TimerDynamite.cs" />
     <Compile Include="Assets\Ebouli\Eboulis.cs" />
+    <Compile Include="Assets\Ecranaccueil\NiveauSuivant.cs" />
     <Compile Include="Assets\LassoMecanique\GestionAnim.cs" />
     <Compile Include="Assets\LassoMecanique\Lasso.cs" />
+    <Compile Include="Assets\STAYINPLACE.cs" />
     <Compile Include="Assets\Safe Zone\SafeZone.cs" />
     <Compile Include="Assets\Script\Note_Control.cs" />
     <Compile Include="Assets\Script\SoundPont.cs" />
