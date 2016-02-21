@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LevelDesign.unity
+- path: Assets/Scene/Zacharie_Test.unity
   isLoaded: 1
   isActive: 1

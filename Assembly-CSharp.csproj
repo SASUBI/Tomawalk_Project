@@ -53,9 +53,9 @@
      <Compile Include="Assets\Ebouli\Eboulis.cs" />
      <Compile Include="Assets\LassoMecanique\GestionAnim.cs" />
      <Compile Include="Assets\LassoMecanique\Lasso.cs" />
-     <Compile Include="Assets\STAYINPLACE.cs" />
      <Compile Include="Assets\Safe Zone\SafeZone.cs" />
      <Compile Include="Assets\Script\Note_Control.cs" />
+     <Compile Include="Assets\Script\STAYINPLACE.cs" />
      <Compile Include="Assets\Script\SoundPont.cs" />
      <Compile Include="Assets\Script\Teleporteur.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
